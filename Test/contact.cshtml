@@ -1,0 +1,44 @@
+﻿@page "/contact"
+@model Meeting_Room_Booking.Pages.Test.contactModel
+@{
+	Layout=null;
+}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <form>
+        <div style="background-color:#EBCECA;" class="container1">
+          <br>
+            <button style="float:left; width:120px;font-size:22px; background-color:#EBCECA;border: none;" id="b1" onclick="document.location.href='https://localhost:7158/home'">Home</button>
+            <button style="float:left; width:120px;font-size:22px;background-color:#EBCECA;border: none;" id="b2" onclick="document.location.href='https://localhost:7158/about'">About Us</button>
+            <button style="float:right;width:130px;font-size:22px;background-color:#EBCECA;border: none;" id="b3" onclick="document.location.href='https://localhost:7158/contact'">Contact Us</button>
+            <button style="float:right;width:130px;font-size:22px;background-color:#EBCECA;border: none;" id="b4" onclick="document.location.href='https://localhost:7158/login'">Login</button>
+              <h1 style="text-align:center;">Paradox Meeting Room</h1>
+            <hr>
+            </div>
+            <h1>Contact Us Form</h1>
+            <hr>
+          <div class="container2">
+          <br><label style="font-size:20px;" for="Full_name"><b>Full Name:</b></label>
+          <br><input style="width:32%;padding:7px" type="text" name="fname" id="fname" required>  
+          
+          
+          <br><br><label style="font-size:20px;" for="email"><b>Email id :</b></label>
+          <br><input style="width:32%;padding:7px" type="text" name="email" id="email" required>
+
+          <br><br><label style="font-size:20px;" for="Phoneno"><b>Phone No:</b></label>
+          <br><input  style="width:32%;padding:7px" type="number" name="phno" id="phno" required>
+
+          <br><br><label style="font-size:20px;"><b>Message:</b></label>
+          <br><input style="padding:30px;width:29%" type="textarea"  name="bookpurpose" id="bookpurpose" required>
+
+          <br><br><br><button style="background-color:rgba(255, 0, 0, 0.511);font-size:23px;color:white;width:170px;border-radius: 10px;" type="reset" class="button" ><b>Reset</b></button>
+          <button type="submit" class="button" style="background-color:rgba(255, 0, 0, 0.511); font-size:23px;width:170px;color:white;border-radius: 10px;"><b>Submit</b></button>
+          <br><br>
+        </div>
+      </div>
+      </form>
+</body>

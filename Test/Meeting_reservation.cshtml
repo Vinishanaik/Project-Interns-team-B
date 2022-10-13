@@ -1,0 +1,92 @@
+﻿@page "/Meeting_reservation"
+@model Meeting_Room_Booking.Pages.Test.Meeting_reservationModel
+@{
+	Layout = null;
+}
+<style>
+.container1{
+		 background: url('../image/booking.jpg')center;
+}
+h1{
+    letter-spacing: 3px;
+}
+body{
+    width: auto;
+}
+form{
+    border:2px solid#000000;
+    margin-left:350px;
+    margin-right:350px;
+    margin-top:80px;
+    text-align:center;
+    ;
+ 
+}
+.button{
+    opacity:0.8;
+    background-color:#0C0C0D;
+    border:1px solid black;
+    cursor:pointer;
+    color:White;
+    font-size:19px;
+    border-radius:15px;
+    width:44%;
+    padding:10px 10px;
+
+}
+input{
+    width:30%;
+    padding:10px 20px;
+    margin:8px 10px;
+    border-color: rgb(11, 9, 9);
+    box-sizing:border-box;
+    border-radius:4px;
+   
+}
+label{
+    font-size:21px;
+}
+input[type=textarea]{
+        border-top: 1px;
+        border-left:none;
+        border-right:none;
+        border-radius:0px;
+        width:30%;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form method=post action="action_page.php">
+        <div class="container1">
+            <br>
+            <h1 style="color:white;">Meeting Reservation</h1><br>
+
+        </div>
+        <div class="container2">
+            <label for="User_name"><b>User Name:</b></label>
+            <input type="text" name="uname" id="uname" required>
+
+            <br><br><label for="date:"><b>Date :</b></label>
+            <input type="date" style="width:30%; margin-left:60px;" name="date" id="date" required>
+
+            <br><br><label for="time"><b>Start_time:</b></label>
+            <input type="time" name="appt" id="appt" min="09:00" max="5:00" required>
+
+            <br><br><label for="time"><b>End_time:</b></label>
+            <input type="time" name="appt" id="appt" min="09:00" max="5:00" required>
+
+            <br><br><button onclick="document.location.href='https://localhost:7158/room'" class="button">Select Room</button>
+
+            <br><br><label><b>Purpose of booking:</b></label>
+            <input type="textarea" name="bookpurpose" id="bookpurpose" required>
+
+            <br><br><button type="submit" style="width: 22%" class="button">Reserve Room</button>
+            <br><br>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,71 @@
+﻿@page "/dashboard"
+@model Meeting_Room_Booking.Pages.Test.dashboardModel
+@{
+    Layout = null;
+}
+<style>
+    .container2 {
+        background: url('../image/save.jpg');
+    }
+
+    .container1 {
+        background-color: #EBCECA;
+        text-align: center;
+    }
+
+    #b1, #b2 {
+        float: left;
+        width: 130px;
+        font-size: 22px;
+        background-color: #EBCECA;
+        border: none;
+    }
+
+    #b3, #b4 {
+        float: right;
+        width: 220px;
+        font-size: 22px;
+        background-color: #EBCECA;
+        border: none;
+    }
+
+    #b5, #b6, #b7, #b8 {
+        margin-left:250px;
+        width: 60%;
+        font-size: 22px;
+        padding: 20px;
+        color: white;
+        background-color: #822118c9;
+        border-radius: 10px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container1">
+        <br>
+        <button id="b1" onclick="document.location.href='https://localhost:7158/home'">Home</button>
+        <button id="b2" onclick="document.location.href='https://localhost:7158/dashboard'">Dashboard</button>
+        <button id="b3" onclick="document.location.href='https://localhost:7158/home'">Logout</button>
+        <button id="b4" onclick="document.location.href='https://localhost:7158/meeting_reservation'">Book Meeting Room</button>
+        <label style="font-size:28px"><b>Paradox Meeting Room</b></label>
+        <br><hr>
+    </div>
+   
+       <br><p style="font-size:25px">Welcome to Meeting Room Booking System</p>
+        <hr>
+    <div class="container2">
+       
+        <br><br><br><br><br><br><br><br><button id="b6" onclick="document.location.href='registration.html'">Booking report</button>
+        <br><br><button id="b6" onclick="document.location.href='registration.html'">Book Meeting Room</button>
+        <br><br><button id="b7" onclick="document.location.href='registration.html'">My Account</button>
+        <br><br><button id="b8" onclick="document.location.href='contactus.html'">Change Password</button>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br>
+
+
+    </div>
+    </body>

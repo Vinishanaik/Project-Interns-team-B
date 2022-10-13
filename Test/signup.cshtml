@@ -1,0 +1,150 @@
+﻿@page "/signup"
+@model Meeting_Room_Booking.Pages.Test.signupModel
+@{
+	Layout=null;
+}
+<style>
+
+    .container1 {
+		background: url('../image/registration_rectangle 10.jpg')center;
+}
+
+
+    h1 {
+        letter-spacing: 3px;
+    }
+
+    body {
+        width: auto;
+
+    }
+
+    form {
+        border: 2px solid#413EE4;
+        margin-left: 340px;
+        margin-right: 340px;
+        margin-top: 80px;
+        text-align: center;
+        background-color: #FBECEC;
+    }
+
+    .button {
+        background-image: url('../image/button1.jpg');
+        border: 1px solid black;
+        cursor: pointer;
+        color: White;
+        font-size: 19px;
+        border-radius: 15px;
+        width: 18%;
+        padding: 10px 10px;
+    }
+
+    input {
+        width: 30%;
+        padding: 10px 20px;
+        margin: 8px 10px;
+        display: inline-block;
+        border-color: rgb(11, 9, 9);
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+    label {
+        font-size: 21px;
+    }
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	
+    <form onsubmit="return validate()">
+        <div class="container1"> 
+          <br>
+          <h1 style="color:white;">Registration Form</h1>
+          <hr>
+          </div>
+          <div class="container2">
+          <br><br><label style="padding:15px" for="Full_name"><b>Full Name:</b></label>
+          <input style="width:14%" type="text" placeholder="First name" name="fname" id="fname" required>  
+          <input style="width:14%" type="text" placeholder="Last name" name="lname" id="lname" required>
+          
+          <br><br><label style="padding:24px" for="email"><b>Email id :</b></label>
+          <input  style="width:31%" type="text" placeholder="Enter Email" name="email" id="ema" required>
+
+          <br><br><label style="padding:20px" for="psw"><b>Password :</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+          <br><br><label style="padding:22px" for="Phoneno"><b>Phone No:</b></label>
+          <input type="number" placeholder="Enter Phone no" name="phno" id="phno" required>
+
+          <hr>
+            <h3>Already registered?<a style="color:red" href="https://localhost:7158/login"> Log in</a>.</h3>
+            <button  type="submit" class="button" style="font-size:23px"><b>Submit</b></button>
+          <br><br>
+        </div>
+      </form>
+</body>
+<script>
+      function validate()
+      {
+        var email = document.getElementById("ema");
+        var x = /^([a-zA-Z0-9\.-_]+)@@([a-zA-Z0-9]+)\.([a-z]{2,10})(\.[a-z]{2,10})?$/;
+        var password = document.getElementById("psw").value;
+        var phonenumber = document.getElementById("phno");
+        var ph = /^[789]{1}[0-9]{9}$/;
+        var OTP = document.getElementById("otp");
+        
+        
+        if (x.test(email.value) == false)
+        {
+          alert("Please Enter valid Email_Id");
+          return false;
+        }
+        
+        else if ((password.trim() .length<6 | password.trim().length>10))
+        {
+          alert("password size must be 6 to 8 characters");
+          return false;
+        }
+        else if (password.search(/[A-Z]/)==-1)
+        {
+            alert("password must contain atleast one uppercase alphabet");
+            return false;
+          }
+          else if (password.search(/[a-z]/) == -1) 
+          {
+            alert("password must contain atleast one lower alphabet");
+            return false;
+          }
+          else if (password.search(/[0-9]/) == -1) 
+          {
+            alert("password must contain atleast one number");
+            return false;
+          }
+          else if (password.search(/[\#\$\%\&\;\:\.\,]/) == -1) 
+          {
+            alert("password must contain atleast one special character  # $ % & ; : . , ");
+            return false;
+          }
+          
+          else if (ph.test(phonenumber.value) == false)
+          {
+            alert("Please Enter Valid phone number");
+            return false;
+          }
+          else if(OTP.value=="")
+          {
+            alert("please Enter OTP")
+            return false;
+          }
+          else
+          {
+            return true;
+          }
+        }
+    </script>

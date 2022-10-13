@@ -1,0 +1,127 @@
+﻿@page "/home"
+@model Meeting_Room_Booking.Pages.Test.homeModel
+@{
+	Layout=null;
+}
+<style>
+    .container1{
+    background-color:#EBCECA;
+    text-align:center;
+}
+.container2{
+    background-color:#eededc;
+    display:inline-block; 
+    vertical-align:top;
+    text-align:center;
+    font-size:30px;
+    margin-top:20px;
+    margin-left:20px;
+}
+.image-bottom{
+position: absolute;
+left:10px;
+z-index: -1;
+}
+.image-top{
+    padding-top: 20px;
+    padding-right:20%;
+}
+
+.container3{
+    display:inline-block; 
+    vertical-align:top;  
+
+}
+.container4{
+    display:inline-block; 
+    vertical-align:top; 
+
+}
+.container5{ 
+    margin-top: -280px;
+    margin-left:-640px;
+    text-align:center;
+}
+
+#b1,#b2{
+    float:left;
+    width:130px;
+    font-size:20px;
+    background-color:#EBCECA;
+    border: none;
+}
+#b3,#b4{
+    float:right;
+    width:130px;
+    font-size:20px;
+    background-color:#EBCECA;
+    border:none;
+}
+#b5{
+    background-color:black;
+    color:white;
+    font-size:20px;
+    width:250px;
+}
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>  
+        <div class="container1">
+          <br>
+            <button id="b1" onclick="href='https://localhost:7158/home'">Home</button>
+            <button id="b2" onclick="document.location.href='https://localhost:7158/about'">About Us</button>
+            <button id="b3" onclick="document.location.href='https://localhost:7158/contact '">Contact Us</button>
+            <button id="b4" value="open" onclick="document.location.href='https://localhost:7158/login'">Login</button>
+          <label style="font-size:28px"><b>Paradox Meeting Room</b></label> 
+          <br><hr>
+          </div>
+            <img src="..\image\demo1.jpg" style="padding:20px; width:700px; height:405px"/>
+           
+            <div class="container2">
+            <br><br><label><b>Our Vision</b></label>
+            <p>To encourage everyone to come together <br> to explore and  expand on ideas,bringing them to life.<br>
+                We offers quality accommodation like the way you want. </p>
+            <br><button id="b5" onclick="document.location.href='https://localhost:7158/contact'">Let's Chat</button><br><br><br>
+            </div>
+            <div class="container3">
+            <br><br><br><br><div class="image-bottom"><img src="../image/new demo.jpg" style=" margin-left: 80px; padding:10px; width:350px; height:500px;"/></div>
+            <div class="image-top"><img src="../image/demo2.jpg" style=" margin-left: 160px; padding:50px; width:350px; height:500px;"/></div>
+            </div>
+            <div class="container4"><img src="../image/demo3.jpg" style="margin-top:140px ; width:350px; height:500px;"/></div>
+            <img src="..\image\demo4.jpg" style="margin-top:90px; padding:50px; width:350px; height:500px;"/>
+      
+          
+          
+            <br><p style="position:absolute;top:145%;left:21%;letter-spacing:2px;font-size:22px;"><b>4 Seater Room</b></p>
+            <p style="position:absolute;top:145%;left:47% ;letter-spacing:2px;font-size:22px;"><b>8 Seater Room</b></p>
+            <p style="position:absolute;top:145%;left:71%;letter-spacing:2px;font-size:22px;"><b>Small conference Room</b></p>
+            <br><label style="position:absolute;top:152% ; letter-spacing:1px;left:22%; font-size:18px;">Room 301-304</label>
+            <p style="position:absolute;top:149.5%;left:48.2%; letter-spacing:1px;font-size:18px;">Room 401-403</p>
+            <p style="position:absolute;top:149.5%;left:75.5%; letter-spacing:1px;font-size:18px;">Room 501-502</p>
+
+            <img src="../image/demo5.jpg" style=" position: absolute; z-index:-1;margin-top:60px; padding:60px; width:1400px; height:400px;"/>
+            <img src="../image/demo6.jpg" style="  position: absolute; z-index:-1; margin-left: 500px; margin-top:15px; padding:60px; width:500px; height:445px;"/>
+            <img src="../image/demo7.jpg" style=" margin-left: 120px; margin-top:160px; padding:10px; width:580px; height:300px;"/>
+            <div class="container5">
+            <label style="font-size:28px"><b>Reserve Meeting Rooms</b></label>
+            <p style="font-size:25px">Allows employees to search and reserve <br>available rooms for meeting. Employees can filter<br> the rooms based on amenities available or the capacity.</p>
+            <br><a href='https://localhost:7158/login'><button id="b5">Book Now!!</button></a><br><br><br>
+            </div>
+            <img src="../image/demo(a).jpg" style=" position: absolute;margin-top:-350px; margin-left:880px; padding:60px; width:400px; height:410px;"/>
+            <img src="../image/demo(b).jpg" style=" position: absolute;margin-top:-280px; margin-left:950px; padding:10px; width: 360px; height:410px;"/>     
+            <img src="../image/demo8.jpg" style=" position: absolute;z-index:-1; margin-top:140px; padding:60px; width: 1400px; height:170px;"/>
+            
+            <p style="font-size:28px;text-align:center; margin-top:220px;"><b>Follow us Paradoxmeetingroom</b></p>
+            <img src="../image/First.jpg" style=" position: absolute; margin-left:100px; margin-top:30px;  width: 290px; height:170px;"/>
+            <img src="../image/Second.jpg" style=" position: absolute;margin-left:450px; margin-top:30px;  width: 290px; height:170px;"/>
+            <img src="../image/Third.jpg" style=" position: absolute;margin-left:790px; margin-top:30px;  width: 290px; height:170px;"/>
+            <img src="../image/Fourth.jpg" style=" position: absolute;margin-left:1130px; margin-top:30px;  width: 290px; height:170px;"/>
+            <img src="../image/icons.jpg" style="  position: absolute; margin-left:700px;margin-top:260px; width: 150px; height:36px;"/>
+            <p style="font-size:20px;margin-left:1160px;margin-top:300px;">COPYRIGHT 2021 | Paradox</p>
+</body>
